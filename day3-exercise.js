@@ -35,6 +35,7 @@ for (let i = 0; i < palindrome.length / 2; i++){
 
 console.log(isPalindrome === true ? "Palindrome" : "Is Not a Palindrome");
 
+
 // PROBLEM 03:_____________________________________________________________________________________
 // Write a code to convert centimeter to kilometer
 // Example: 100000->"1 km"
@@ -43,7 +44,7 @@ const centimeter = 100000;
 
 let kilometer = centimeter/100000;
 
-console.log(`${centimeter} -> "${kilometer} km"`)
+console.log(`${centimeter} -> "${kilometer} km"`);
 
 
 // PROBLEM 04:_____________________________________________________________________________________
@@ -84,6 +85,7 @@ for (let i = 0; i < words.length; i++) {
 
 let capitalizedString = words.join(" ");
 console.log(capitalizedString);
+
 
 // PROBLEM 07:_____________________________________________________________________________________
 // Write a code to reverse a string
@@ -190,7 +192,7 @@ let output = "";
 
 for (let i = 0; i < kata.length; i++){
   if (kata[i] === 'a' || kata[i] === "A") {
-    output += modifiedStr; // Append '*' character
+    output += modifiedStr; 
   } else {
     output += kata[i];
   }

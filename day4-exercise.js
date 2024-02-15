@@ -11,14 +11,20 @@ according to the height we prove like the following:
 Parameters : height -> triangle height
 */
 
+/*
+NOTED:  Perlu memperhatikan penempatan dari definisi valiabel.
+        apakah variable ditempatkan di luar atau di dalam for looping
+*/
+
 const triangleHeight = 4;
 
 function triangle(height){
     
-    let num = 1   
+    let num = 1  
+    
 
     for (let i=0; i <= height; i++){
-        let line = "";
+        let line = ""; 
         for (let j = 0; j <= i; j++){
             if(num<10){
                 line += "0" + num + " ";
@@ -47,6 +53,8 @@ Parameters : n -> total looping
 
 */
 
+// CARA I
+
 let n = 15;
 let array = []
 
@@ -68,6 +76,25 @@ for (let j = 0; j < array.length; j++) {
 }
 
 console.log(array);
+
+// CARA II
+
+function fizzBuzz(n) {
+    //   let num1 = 1;
+      for (let i = 1; i <= n; i++) {
+        let display = "";
+        if (i % 3 === 0) {
+          display += "Fizz";
+        }
+        if (i % 5 === 0) {
+          display += "Buzz";
+        }
+        console.log(display || i);
+      }
+    }
+    
+    fizzBuzz(45);
+
 
 /*
 PROBLEM 03:_____________________________________________________________________________________
@@ -99,8 +126,8 @@ function calculateBMI(weight, height) {
     }
 }
 
-const weight = 70; // in kilograms
-const height = 1.75; // in meters
+const weight = 65; // in kilograms
+const height = 1.65; // in meters
 
 const bmiCategory = calculateBMI(weight, height);
 console.log("BMI Category:", bmiCategory);
@@ -113,6 +140,7 @@ return a new array that contains even numbers only
     Example :[1,2,3,4,5,6,7,8,9,10]->[246810]
 
 */
+// CARA I
 
 function removeOdd (number) {
     let result = [];
@@ -129,6 +157,13 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const newNumbers = removeOdd(numbers)
 console.log(newNumbers)
 
+// CARA II
+function removeOddNumbers(arr){
+    return arr.filter((item) => item % 2 ===0);
+}
+
+const inputArr = [1,2,3,4,5,6,7,8,9,10];
+console.log(removeOddNumbers(inputArr));
 
 
 /*
@@ -139,6 +174,8 @@ an array of words
 
 */
 
+// CARA I
+
 function splitString(word) {
     return word.split(" ")
 }
@@ -146,3 +183,26 @@ function splitString(word) {
 const words = "Hello World";
 const arrayWords = splitString(words);
 console.log(arrayWords);  
+
+
+// CARA II
+
+const splitS = function(input){
+    let kata = [];
+    let temp = "";
+
+    for(let i = 0; i<input.length;i++){
+        if(input[i]=== " "){
+            kata.push(temp);
+            temp ="";
+            continue;// skip loopingan
+        }
+        temp+=input[i];
+    }
+
+    kata.push(temp);
+
+    return kata;
+};
+
+console.log(splitS("Hello World Jogja"))
