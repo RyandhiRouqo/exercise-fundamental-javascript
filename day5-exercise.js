@@ -278,6 +278,26 @@ arr=[1,[],undefined,{},"string",{},[]]
 a. The function will return[1,undefined,"string"]
 */
 
+function returnPrimitive(arr) {
+    const newArr = []
+    const primitive = new Map([
+        [1, true],
+        [undefined, true],
+        ["string", true],
+
+    ])
+    console.log(primitive);
+    for (let i of arr) {
+        if(primitive.has(i)) {
+            newArr.push(i);
+        }
+    }
+    console.log(newArr);
+    return newArr
+}
+
+const inputDataTypes = [1, [], undefined, {}, "string", {}, []]
+console.log(returnPrimitive(inputDataTypes));
 
 /*
 PROBLEM 02:_____________________________________________________________________________________
@@ -304,7 +324,20 @@ return the sum of all the number
 a. Example : mixedArray =["3",1,"string",null,false,undefined,2]->3
 */
 
+function smallestNum(arr) {
 
+  const arrowOfNum = [];
+  for (let i of arr) {
+    if (typeof i === "number") {
+      arrowOfNum.push(i);
+    }
+  }
+  const sum = arrowOfNum.reduce((a, b) => a + b);
+  return sum;
+}
+
+const mixedArr = ["3", 1, "string", null, false, undefined, 2];
+console.log(smallestNum(mixedArr));
 
 /*
 PROBLEM 04:_____________________________________________________________________________________

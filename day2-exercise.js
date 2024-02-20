@@ -24,20 +24,8 @@ console.log(fahrenheit);
 // PROBLEM 02:_____________________________________________________________________________________
 // Write a code to check whether the number is odd or even
 
-// Procedure:
-// 1. Find out how to check whether the number is odd or even
-//  if the number in module 2 is 0 so the number is even 
-//  else the number in module 2 is 1 so the number is odd
-// 2. Find out variables to convert celsius to fahrenheit
-// 	~number 	
-// 3. Assign the variable value of celsius
-// 	~number = 25
-
-// Solution:
-// 1. Define and assign the variable value
 const number = 2;
 
-// 2. Write equations in code
 if(number % 2 === 1){
     console.log("odd number");
 }else{
@@ -49,8 +37,8 @@ if(number % 2 === 1){
 // Write a code to check whether the number is prime number or not
 
 
-const num = 1;
-let isPrime = true;
+const num = 7;
+let isPrime = true; // kalau hasilnya boolean penamannya di awali dengan is....
 
 if(num > 1){
     for(let i = 2; i < num; i++){
@@ -70,14 +58,20 @@ console.log(isPrime === true ? "Is a Prime Number" : "Is Not a Prime Number");
 // PROBLEM 04:_____________________________________________________________________________________
 // Write a code to find the sum of the number 1 to N
 
-const nomor = 6;
+const nomor = 7;
 let jumlah = null;
+let message = "";
 
-for(let i = 1; i <+ nomor; i++){    
+for(let i = 1; i <= nomor; i++){    
     jumlah  = jumlah + i;
+
+    message += i + (i !== nomor ? "+" : "");
+
+
 }
 
 console.log(jumlah);
+console.log(message + "="+jumlah)
 
 // PROBLEM 05:_____________________________________________________________________________________
 // Write a code to find factorial of a number
